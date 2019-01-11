@@ -1,0 +1,7 @@
+<launch>
+<node name="gps_utils_set" pkg="geodetic_utils" type="set_gps_reference_node" output="screen">
+  <remap from="/navsat/fix" to="/gps"/>
+</node>
+</launch>
+
+

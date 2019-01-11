@@ -5,11 +5,50 @@ Simple library for converting coordinates to/from several geodetic frames and ma
 
 ## Libraries
 ### geodetic_conv
+
 * Stores a frame as a reference
-* Converts between various co-ordinate systems: WGS84, ECEF, ENU, NED (see 'Notes' below)
+
+* Converts between various co-ordinate systems: WGS84, ECEF, ENU, NED (see 'Notes' below)  
+
+  ## Quick Start
+
+###install & Build
+
+The following steps build and install geodetic_utils, which is needed to support the 
+
+[catkin_simple](https://github.com/catkin/catkin_simple) package.
+
+```shell
+cd mysrc
+git clone git@github.com:catkin/catkin_simple.git 
+git clone git@github.com:glmhit/geodetic_utils.git
+catkin build
+source ./devel/setup.zsh
+
+```
+
+
+
+```shell
+roslaunch geodetic_utils set_gps_refer.launch
+```
+
+```shell
+rosbag play my_data.bag
+```
+
+```shell
+roslaunch geodetic_utils gps_to_pose.launch
+```
+
+
+
+![1547175394444](assets/1547175394444.png)
 
 ## Nodes
+
 ### set_gps_reference_node
+
 Creates a reference frame based on initial GPS measurements
 #### Arguments
 * number of initial GPS measurements to wait for and average over

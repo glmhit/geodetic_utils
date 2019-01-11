@@ -1,0 +1,11 @@
+<launch>
+<node name="gps_utils" pkg="geodetic_utils" type="gps_to_pose_conversion_node" output="screen">
+  <param name="~frame_id" value="odom"/>
+  <param name="~publish_pose" value="true"/>
+  <remap from="/gps" to="/navsat/fix"/>
+  <remap from="/imu" to="/imu/data"/>
+</node>
+
+</launch>
+
+
