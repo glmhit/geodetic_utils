@@ -10,9 +10,9 @@ Simple library for converting coordinates to/from several geodetic frames and ma
 
 * Converts between various co-ordinate systems: WGS84, ECEF, ENU, NED (see 'Notes' below)  
 
-  ## Quick Start
 
-###install & Build
+##  Quick Start      
+### install & Build    
 
 The following steps build and install geodetic_utils, which is needed to support the 
 
@@ -40,7 +40,6 @@ rosbag play my_data.bag
 ```shell
 roslaunch geodetic_utils gps_to_pose.launch
 ```
-
 
 
 ![1547175394444](assets/1547175394444.png)
